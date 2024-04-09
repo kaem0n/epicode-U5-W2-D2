@@ -22,7 +22,7 @@ public class AuthorService {
 
     public Author findById(long id) {
         Author found = null;
-        for (Author author: this.authorList) {
+        for (Author author : this.authorList) {
             if(author.getId() == id) found = author;
         }
         if (found == null) throw new NotFoundException(id);
@@ -41,6 +41,6 @@ public class AuthorService {
 
     public void delete(long id) {
         Author found = this.findById(id);
-        authorList.remove(found);
+        this.authorList.remove(found);
     }
 }
