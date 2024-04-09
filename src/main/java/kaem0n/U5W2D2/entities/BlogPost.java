@@ -2,8 +2,6 @@ package kaem0n.U5W2D2.entities;
 
 import lombok.*;
 
-import java.util.Random;
-
 @Getter
 @Setter
 @NoArgsConstructor

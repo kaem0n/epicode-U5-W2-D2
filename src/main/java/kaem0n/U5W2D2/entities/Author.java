@@ -3,7 +3,6 @@ package kaem0n.U5W2D2.entities;
 import lombok.*;
 
 import java.time.LocalDate;
-import java.util.Random;
 
 @Getter
 @Setter
@@ -18,11 +17,9 @@ public class Author {
     private String avatar;
 
     public Author(String name, String surname, String email, LocalDate birthday) {
-        this.id = new Random().nextLong();
         this.name = name;
         this.surname = surname;
         this.email = email;
         this.birthday = birthday;
-        this.avatar = "https://ui-avatars.com/api/?name=" + name + "+" + surname;
     }
 }
