@@ -10,7 +10,6 @@ import java.util.Random;
 @NoArgsConstructor
 @ToString
 public class Author {
-    @Setter(AccessLevel.NONE)
     private long id;
     private String name;
     private String surname;

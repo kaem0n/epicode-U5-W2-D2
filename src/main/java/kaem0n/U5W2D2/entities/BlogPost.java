@@ -9,7 +9,6 @@ import java.util.Random;
 @NoArgsConstructor
 @ToString
 public class BlogPost {
-    @Setter(AccessLevel.NONE)
     private long id;
     private String category;
     private String title;
@@ -18,10 +17,8 @@ public class BlogPost {
     private int readingTime;
 
     public BlogPost(String category, String title, String content, int readingTime) {
-        this.id = new Random().nextLong();
         this.category = category;
         this.title = title;
-        this.coverUrl = "https://picsum.photos/500";
         this.content = content;
         this.readingTime = readingTime;
     }

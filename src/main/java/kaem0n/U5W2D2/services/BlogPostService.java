@@ -6,12 +6,19 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 @Service
 public class BlogPostService {
     private final List<BlogPost> postList = new ArrayList<>();
 
+    public List<BlogPost> findAll() {
+        return this.postList;
+    }
+
     public BlogPost save(BlogPost body) {
+        body.setId(new Random().nextLong(100000000, 999999999));
+        body.setCoverUrl("https://picsum.photos/500");
         this.postList.add(body);
         return body;
     }
